@@ -1,6 +1,8 @@
 ## Hands On 7 - Lateral Movement, Reverse Shell
 
-Solution uses the PowerShell reverse shell from PayloadOfAllThings: [Powershell Oneliner Reverse Shell](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md#powershell)
+Solution uses the following resources: 
+- PowerShell reverse shell from PayloadOfAllThings: [Powershell Oneliner Reverse Shell](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md#powershell)
+- powercat as the listener: [powercat](https://github.com/besimorhino/powercat)
 
 #### Get a reverse shell on WMI server using Win32_Process
 Start the listner:
