@@ -1,4 +1,5 @@
-### Hands On 2: Using Methods:
+## Hands On 2
+### Using Methods
 #### List all the methods named "Create" in the root\cimv2 namespace
 `Get-CimClass -namespace root\cimv2 -MethodName create`
 		
