@@ -1,4 +1,5 @@
-### Hands On 1: Retrieve the following information from your local machine using WMI/CIM cmdlets
+## Hands On 1
+### Retrieve the following information from your local machine using WMI/CIM cmdlets
 
 #### To get information on install antivirus product
 `Get-WmiObject -Namespace "root\SecurityCenter" -class AntiVirusProduct`
