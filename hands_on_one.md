@@ -1,4 +1,5 @@
-## Hands On 1
+## Hands On 1 - Exploring Classes
+
 ### Retrieve the following information from your local machine using WMI/CIM cmdlets
 
 #### To get information on install antivirus product
