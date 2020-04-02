@@ -1,5 +1,5 @@
-## Hands On 6
-### Lateral Movement
+## Hands On 6 - Lateral Movement, Password Brute Force
+
 #### Use WMI to brute force password for a given user in the domain
 Note: This solution does not account for password policies.  It has the potential to lock a user's account
 
