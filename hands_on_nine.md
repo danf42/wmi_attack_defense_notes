@@ -1,5 +1,4 @@
-## Hands On 9
-### Event Consumers
+## Hands On 9 - Event Consumers
 
 #### Achieve reboot persistance on your lab machine using WMI permenant Event consumer
 ```
