@@ -1,5 +1,4 @@
-## Hands On 4
-### Interacting with the registry
+## Hands On 4 - Interacting with the registry
 
 #### Read registry, get recently used commands:
 ```
