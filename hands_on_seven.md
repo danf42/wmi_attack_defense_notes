@@ -1,5 +1,5 @@
-## Hands On 7
-### Lateral Movement
+## Hands On 7 - Lateral Movement, Reverse Shell
+
 #### Get a reverse shell on WMI server using Win32_Process
 Start the listner:
 
