@@ -1,5 +1,5 @@
-## Hands On 3
-### List process owners using Associators Of
+## Hands On 3 - Associators 
+
 #### Get information about a particular process:
 `Get-WmiObject -query "select * from Win32_Process where name = 'notepad++.exe'"`
 
