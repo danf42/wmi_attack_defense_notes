@@ -9,6 +9,7 @@
 
 #### Get the domain controller	
 `Get-CimInstance -namespace root/directory/ldap -class ds_computer | Where-Object {$_.ds_userAccountControl -eq 532480}`
+
 `Get-CimInstance -namespace root/directory/ldap -query "select * from ds_computer where DS_userAccountControl = 532480"`
 
 #### Get all domain users
@@ -17,7 +18,7 @@
 #### Get all domain groups
 `Get-CimInstance -namespace root/cimv2 -class win32_group -Filter "Domain = 'home'"`
 
-#### Get group membership of the domain admins group for teh current and all trusted domains
+#### Get group membership of the domain admins group for the current and all trusted domains
 `Get-CimInstance -namespace root/cimv2 -class Win32_Groupuser | where {$_.GroupComponent -match "Domain Admins"}  | Foreach-Object {$_.PartComponent}`
 
 #### Get group membership of a particular user
@@ -35,23 +36,29 @@
 
 #### Get details of a particular user
 `Get-WmiObject -Namespace root\directory\ldap -Class ds_user -Filter 'DS_sAMAccountName = "user3"'`
+
 `Get-WmiObject -Namespace root\directory\ldap -Query "select * from ds_user where DS_sAMAccountName='user3'"`
 
 #### Get Associators of for user
 `Get-WmiObject -Namespace root\directory\ldap -Class ds_user -Filter 'DS_sAMAccountName = "user3"' | select __RELPATH`
+
 `Get-WmiObject -Namespace root\directory\ldap -Query 'Associators of {ds_user.ADSIPath="LDAP://CN=<user name>,CN=Users,DC=home,DC=local"} where classdefsonly'`
 
 #### List Computers with OS Server 2012
 `Get-WmiObject -Namespace root\directory\ldap -Class ds_computer -Filter "DS_operatingSystem like '%2012%'"`
+
 `Get-WmiObject -Namespace root\directory\ldap -Query "select * from ds_computer where DS_operatingSystem like '%2012%'"`
 
 #### List all logged on users
 `Get-WmiObject -class win32_loggedonuser`
+
 `Get-WmiObject -class win32_loggedonuser -ComputerName <computer name>`
 
 #### List domains/forests which the current domain trust
 `[DirectoryServices.ActiveDirectory.Forest]::GetCurrentForest()`
+
 `[DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()`
+
 `[DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain().GetAllTrustRelationships()`
 
 #### Get list of computers that the local user has admin privs; surpress error messages
