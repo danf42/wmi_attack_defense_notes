@@ -1,7 +1,7 @@
 ## Hands On 10: Security Descriptors
 
 #### Use EvilNetConnection provider discussed earlier and modify Security Descriptor of its namespace to achieve command execution using a non-admin user
-This solution walked through the Set-RemoteWMI script to better understand how it works and the commands being used to modify the security descriptors
+This solution walks through the Set-RemoteWMI script to better understand how it works and the commands being used to modify the security descriptors
 
 - [EvilNetConnectionWMIProvider](https://github.com/jaredcatkinson/EvilNetConnectionWMIProvider)
 - [Set-RemoteWMI](https://raw.githubusercontent.com/samratashok/nishang/master/Backdoors/Set-RemoteWMI.ps1)
