@@ -58,7 +58,7 @@ foreach($proc in $procs){
     $processObjects += New-Object -TypeName psobject -Property $objectProperty
 }
 
-$processObjects | Select Handle,ProcessName,ExecutablePath,UserName,Domian,SID | ft
+$processObjects | Select Handle,ProcessName,ExecutablePath,UserName,Domain,SID | ft
 ```
 
 ### List ownwers of all the files in a specific directory
